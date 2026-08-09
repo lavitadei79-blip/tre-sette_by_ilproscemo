@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c5w6fk8fa5byx"]
+
+[ext_resource type="Script" uid="uid://bqdm67e0wkjr6" path="res://scripts/card_manager.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bc3p6ydr5mk1n" path="res://scenes/deck.tscn" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://c2dsbh60kj2uo" path="res://scripts/player_hand.gd" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://dbovc26fw1h0r" path="res://scripts/input_manager.gd" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://dr0unwfrwu8ny" path="res://scenes/card_slot.tscn" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://7cog7pi8lw8p" path="res://scripts/game_manager.gd" id="5_u5sy4"]
+[ext_resource type="Script" uid="uid://cy5222dt5pyrf" path="res://scripts/opponent_hand.gd" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://bimu0lvfoivxv" path="res://scripts/opponent_ai.gd" id="8_gee14"]
+[ext_resource type="Texture2D" uid="uid://xvoj3mj1xae4" path="res://assets/sprites/alciba.png" id="9_0tnpc"]
+
+[node name="Game" type="Node2D" unique_id=804015766]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=389317893]
+script = ExtResource("1_yqjtg")
+
+[node name="Deck" parent="." unique_id=1331694543 instance=ExtResource("3_lbhrr")]
+position = Vector2(560, 480)
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=537934605]
+script = ExtResource("4_lbhrr")
+
+[node name="InputManager" type="Node2D" parent="." unique_id=92087276]
+position = Vector2(-2, 0)
+script = ExtResource("5_iywne")
+
+[node name="GameManager" type="Node" parent="." unique_id=678646906]
+script = ExtResource("5_u5sy4")
+
+[node name="CardSlot" parent="." unique_id=841021464 instance=ExtResource("5_p57ef")]
+position = Vector2(720, 480)
+
+[node name="OpponentHand" type="Node2D" parent="." unique_id=1364413628]
+position = Vector2(560, 480)
+script = ExtResource("7_u5sy4")
+
+[node name="OpponentAI" type="Node" parent="." unique_id=1622384297]
+script = ExtResource("8_gee14")
+
+[node name="Timer" type="Timer" parent="." unique_id=1183570153]
+wait_time = 0.2
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1694745488]
+layer = -132
+offset = Vector2(720, 480)
+transform = Transform2D(1, 0, 0, 1, 720, 480)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1060056216]
+texture = ExtResource("9_0tnpc")

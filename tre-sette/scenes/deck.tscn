@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bc3p6ydr5mk1n"]
+
+[ext_resource type="Script" uid="uid://ygofstn6nykp" path="res://scripts/deck.gd" id="1_6rnap"]
+[ext_resource type="Texture2D" uid="uid://dcc418354rtgv" path="res://assets/sprites/other/blanc_card.png" id="2_gdbsr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er72m"]
+size = Vector2(70, 110)
+
+[node name="Deck" type="Node2D" unique_id=1331694543]
+z_index = -2
+script = ExtResource("1_6rnap")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=761429341]
+z_index = -2
+texture = ExtResource("2_gdbsr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1240878938]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735033554]
+z_index = -2
+shape = SubResource("RectangleShape2D_er72m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1386205221]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+offset_left = -11.0
+offset_top = -13.0
+offset_right = 12.3333435
+offset_bottom = 10.333313
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
