@@ -4,8 +4,8 @@ An Italian card game played with the Neapolitan-suited cards. Built with godot
 
 # Preview
 <img width="360" height="240" alt="Screenshot 2026-08-25 141612" src="https://github.com/user-attachments/assets/fdb8e485-140f-40d9-b37f-779bbb05b924" />
-<img width="250" height="270" alt="Screenshot 2026-08-25 141517" src="https://github.com/user-attachments/assets/87000d18-7452-42bc-9949-b901682a6e71" />
-<img width="360" height="240" alt="Screenshot 2026-08-26 121425" src="https://github.com/user-attachments/assets/64bd8421-fd20-4bd7-862c-d5a7ec501a80" />
+<img width="360" height="240" alt="Screenshot 2026-08-28 135809" src="https://github.com/user-attachments/assets/db76c600-d21f-45da-af71-b61c6eb67962" />
+
 
 # Try it out
 https://ilproscemo.itch.io/tressettebyilproscemo
